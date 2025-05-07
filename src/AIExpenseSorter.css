@@ -1,0 +1,227 @@
+.budget-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  /* Fix for stacked, full-width inputs + better alignment */
+.budget-container label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+  }
+  
+  .budget-container input {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .budget-container input:focus {
+    outline: none;
+    border-color: #217a3b;
+    box-shadow: 0 0 0 3px rgba(33, 122, 59, 0.1);
+  }
+  
+  .budget-container h2 {
+    color: #217a3b;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .budget-container textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    resize: vertical;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: all 0.3s ease;
+    min-height: 120px;
+  }
+  
+  .budget-container textarea:focus {
+    outline: none;
+    border-color: #217a3b;
+    box-shadow: 0 0 0 3px rgba(33, 122, 59, 0.1);
+  }
+  
+  .budget-container button {
+    background-color: #217a3b;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .budget-container button:hover {
+    background-color: #145a28;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(33, 122, 59, 0.2);
+  }
+  
+  .budget-container button:active {
+    transform: scale(0.98);
+  }
+  
+  .budget-summary {
+    margin-top: 2.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .budget-summary h4 {
+    margin-bottom: 1.25rem;
+    color: #217a3b;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .budget-summary p {
+    margin: 0.75rem 0;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  
+  .budget-info {
+    margin-top: 2.5rem;
+    padding: 1.75rem;
+    background-color: #f0f7f2;
+    border-left: 4px solid #217a3b;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #1a1a1a;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .budget-info h4 {
+    margin-bottom: 1.25rem;
+    color: #217a3b;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .budget-info p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  /* === Animations === */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* === Container animation === */
+  .budget-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  /* === Animated result sections === */
+  .budget-summary,
+  .budget-info,
+  .budget-chart {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+  }
+  
+  /* === Optional staggered delay === */
+  .budget-summary:nth-of-type(1) {
+    animation-delay: 0.1s;
+  }
+  .budget-summary:nth-of-type(2) {
+    animation-delay: 0.2s;
+  }
+  .budget-summary:nth-of-type(3) {
+    animation-delay: 0.3s;
+  }
+  
+  /* === Pop effect for AI summary === */
+  .budget-info p {
+    animation: popIn 0.4s ease-in-out;
+  }
+  
+  /* === Button click interaction === */
+  .budget-container button:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  .budget-chart {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .budget-container {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .budget-container h2 {
+      font-size: 1.75rem;
+    }
+    
+    .budget-container input,
+    .budget-container textarea {
+      padding: 0.75rem 1rem;
+    }
+    
+    .budget-summary,
+    .budget-info {
+      padding: 1.25rem;
+    }
+  } 
