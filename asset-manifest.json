@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/money-and-minorities-website/static/css/main.d6ec2340.css",
+    "main.css": "/money-and-minorities-website/static/css/main.89a29c13.css",
     "main.js": "/money-and-minorities-website/static/js/main.e48c1263.js",
     "static/js/453.1a783746.chunk.js": "/money-and-minorities-website/static/js/453.1a783746.chunk.js",
     "static/media/logo.jpg": "/money-and-minorities-website/static/media/logo.8ec6306d20f8d2843927.jpg",
     "index.html": "/money-and-minorities-website/index.html",
-    "main.d6ec2340.css.map": "/money-and-minorities-website/static/css/main.d6ec2340.css.map",
+    "main.89a29c13.css.map": "/money-and-minorities-website/static/css/main.89a29c13.css.map",
     "main.e48c1263.js.map": "/money-and-minorities-website/static/js/main.e48c1263.js.map",
     "453.1a783746.chunk.js.map": "/money-and-minorities-website/static/js/453.1a783746.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6ec2340.css",
+    "static/css/main.89a29c13.css",
     "static/js/main.e48c1263.js"
   ]
 }
