@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/logo.jpg';
 import './App.css';
 import AIExpenseSorter from './AIExpenseSorter';
@@ -115,6 +115,51 @@ function BudgetApp() {
   return <div className="page"><AIExpenseSorter /></div>;
 }
 
+function EducationalResources() {
+  return (
+    <div className="page">
+      <h2>Educational Resources</h2>
+      <div className="resources-grid">
+        <div className="resource-card">
+          <h3>Budgeting Basics</h3>
+          <ul>
+            <li><a href="https://www.nerdwallet.com/article/finance/how-to-budget" target="_blank" rel="noopener noreferrer">How to Create a Budget</a></li>
+            <li><a href="https://www.investopedia.com/terms/5/50-30-20-rule.asp" target="_blank" rel="noopener noreferrer">50/30/20 Rule Explained</a></li>
+            <li><a href="https://www.mint.com/budgeting-3/how-to-make-a-budget" target="_blank" rel="noopener noreferrer">Budgeting Tools and Apps</a></li>
+          </ul>
+        </div>
+        
+        <div className="resource-card">
+          <h3>Investing Fundamentals</h3>
+          <ul>
+            <li><a href="https://www.investopedia.com/investing-essentials-4689754" target="_blank" rel="noopener noreferrer">Investing Basics</a></li>
+            <li><a href="https://www.nerdwallet.com/article/investing/how-to-start-investing" target="_blank" rel="noopener noreferrer">How to Start Investing</a></li>
+            <li><a href="https://www.investopedia.com/articles/basics/06/invest1000.asp" target="_blank" rel="noopener noreferrer">Investing with Small Amounts</a></li>
+          </ul>
+        </div>
+
+        <div className="resource-card">
+          <h3>Credit & Debt Management</h3>
+          <ul>
+            <li><a href="https://www.creditkarma.com/credit-cards/i/credit-score-basics" target="_blank" rel="noopener noreferrer">Understanding Credit Scores</a></li>
+            <li><a href="https://www.nerdwallet.com/article/finance/how-to-pay-off-debt" target="_blank" rel="noopener noreferrer">Debt Payoff Strategies</a></li>
+            <li><a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener noreferrer">Credit Reports Guide</a></li>
+          </ul>
+        </div>
+
+        <div className="resource-card">
+          <h3>Financial Planning</h3>
+          <ul>
+            <li><a href="https://www.investopedia.com/financial-planning-4689751" target="_blank" rel="noopener noreferrer">Financial Planning Basics</a></li>
+            <li><a href="https://www.nerdwallet.com/article/investing/retirement-planning" target="_blank" rel="noopener noreferrer">Retirement Planning</a></li>
+            <li><a href="https://www.investopedia.com/articles/personal-finance/101515/why-financial-literacy-so-important.asp" target="_blank" rel="noopener noreferrer">Importance of Financial Literacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
@@ -122,6 +167,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/tools">Financial Tools</Link>
+        <Link to="/resources">Resources</Link>
         <Link to="/events">Events</Link>
         <Link to="/officers">Officers</Link>
         <Link to="/contact">Contact</Link>
@@ -132,6 +178,7 @@ function App() {
         <Route path="/tools" element={<FinancialTools />} />
         <Route path="/tools/chatbot" element={<Chatbot />} />
         <Route path="/tools/budget" element={<BudgetApp />} />
+        <Route path="/resources" element={<EducationalResources />} />
         <Route path="/events" element={<Events />} />
         <Route path="/officers" element={<Officers />} />
         <Route path="/contact" element={<Contact />} />
