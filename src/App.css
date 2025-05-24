@@ -202,8 +202,9 @@ body {
 /* Mobile-first layout improvements */
 @media (max-width: 900px) {
   .navbar {
-    padding: 0.7rem;
-    border-radius: 0 0 12px 12px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0 0 14px 14px;
+    min-height: 56px;
   }
   .footer {
     font-size: 0.98rem;
@@ -211,11 +212,75 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .navbar {
+    padding: 0.3rem 0.3rem;
+    min-height: 48px;
+  }
+  .navbar h1 {
+    font-size: 1.1rem;
+    padding-left: 0.2rem;
+  }
+  .navbar .md\:hidden {
+    display: flex !important;
+  }
+  .navbar .hidden.md\:flex {
+    display: none !important;
+  }
+  .navbar button {
+    padding: 0.5rem 0.7rem;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    transition: background 0.2s;
+  }
+  .navbar button:active, .navbar button:focus {
+    background: #e0f3e6;
+    outline: none;
+  }
+  .navbar svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .navbar .md\:hidden + div {
+    margin-top: 0.5rem;
+  }
+  .navbar .md\:hidden {
+    width: 100%;
+  }
+  .navbar .block {
+    width: 100%;
+    text-align: left;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    margin-bottom: 0.2rem;
+    background: #fff;
+    transition: background 0.18s;
+  }
+  .navbar .block:hover {
+    background: #e0f3e6;
+  }
   .nav-links {
     gap: 0.5rem;
   }
   .footer-links {
     gap: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1rem;
+    padding-left: 0.1rem;
+  }
+  .navbar .block {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  .page {
+    margin: 0.25rem;
+    padding: 0.75rem;
   }
 }
 
@@ -506,34 +571,6 @@ body {
 
   .resource-card {
     text-align: left;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  .App-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .App-header h2 {
-    font-size: 1.1rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  .navbar a {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem;
-  }
-
-  .page {
-    margin: 0.25rem;
-    padding: 0.75rem;
   }
 }
 
