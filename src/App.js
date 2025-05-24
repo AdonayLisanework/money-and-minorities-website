@@ -86,7 +86,6 @@ function Chatbot() {
   ]);
   const [input, setInput] = React.useState('');
   const [loading, setLoading] = React.useState(false);
-  const apiKey = process.env.REACT_APP_API_KEY;
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -94,20 +93,13 @@ function Chatbot() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://api.openai.com/v1/chat/completions",
+        "https://money-and-minorities-backend.onrender.com/api/chat",
         {
-          model: "gpt-3.5-turbo",
           messages: [
             { role: "system", content: "You are a financial tutor who is educating a client new to finances." },
             ...messages.filter(m => m.sender === 'user').map(m => ({ role: 'user', content: m.text })),
             { role: 'user', content: input }
           ],
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-          },
         }
       );
       const reply = res.data.choices[0].message.content;

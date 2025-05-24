@@ -94,17 +94,11 @@ const AIExpenseSorter = () => {
     }
   }`;
   
-      const res = await axios.post("https://api.openai.com/v1/chat/completions", {
-        model: "gpt-3.5-turbo",
+      const res = await axios.post("https://money-and-minorities-backend.onrender.com/api/chat", {
         messages: [
           { role: "system", content: "You are a financial assistant helping categorize user expenses." },
           { role: "user", content: prompt },
         ],
-      }, {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-          "Content-Type": "application/json",
-        },
       });
   
       const reply = res.data.choices[0].message.content;
@@ -131,14 +125,8 @@ const AIExpenseSorter = () => {
   Mention whether they are over or under the recommended 50/30/20 rule, and give encouragement or practical guidance based on the results.
   `;
   
-      const summaryRes = await axios.post("https://api.openai.com/v1/chat/completions", {
-        model: "gpt-3.5-turbo",
+      const summaryRes = await axios.post("https://money-and-minorities-backend.onrender.com/api/chat", {
         messages: [{ role: "user", content: summaryPrompt }],
-      }, {
-        headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-          "Content-Type": "application/json",
-        },
       });
   
       setSummary(summaryRes.data.choices[0].message.content);
